@@ -1,0 +1,91 @@
+// out: ../css/
+
+//导航
+.bg-body-tertiary {
+    background-color: transparent !important;
+    .navbar-collapse {
+        flex-grow: 0;
+        // flex 第一个参数
+    }
+    .nav-link {
+        color: #fff;
+    }
+    .navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+        color: #fff;
+    }
+}
+
+// 轮播图: 小于768图片高度250 max；大于等于768图片高度400 min；大于等于992图片高度500
+
+// 轮播图
+.carousel {
+    // 响应式 → 媒体查询
+    @media (max-width:768px) {
+       .carousel-item {
+        height: 250px;
+       }
+    }
+    @media (min-width:768px) {
+       .carousel-item {
+        height: 400px;
+       }
+    }
+    @media (min-width:992px) {
+       .carousel-item {
+        height: 500px;
+       }
+    }
+
+    .carousel-item {
+        // height: 500px;
+        background-size: cover;
+        background-position: center 0;
+    }
+    .carousel-item:nth-child(1) {
+        background-image: url(../assets/uploads/banner_1.jpg);
+    }
+    .carousel-item:nth-child(2) {
+        background-image: url(../assets/uploads/banner_2.jpg);
+    }
+    .carousel-item:nth-child(3) {
+        background-image: url(../assets/uploads/banner_3.jpg);
+    }
+    .carousel-item:nth-child(4) {
+        background-image: url(../assets/uploads/banner_4.jpg);
+    }
+}
+
+// 开源项目
+// 视口宽度大于992；一行排4个盒子  col-lg-3
+// 视口宽度大于768；一行排2个盒子  col-md-6
+.project {
+    margin-top: 60px;
+    text-align: center;
+    .row {
+        div {
+            margin-bottom: 10px;
+            // ***warn div 前面无点
+            height: 200px ;
+            // background-color: pink !important;
+            a {
+                // 块级的宽度和父级一样大
+                display: block;
+                height: 200px;
+                background-color: green;
+                border-radius: 4px;
+            }
+            &:nth-child(1) a {
+                background-color: #70c3ff;
+            }   
+            &:nth-child(2) a {
+                background-color: #fd6a7f;
+            }   
+            &:nth-child(3) a {
+                background-color: #7f8ea0;
+            }   
+            &:nth-child(4) a {
+                background-color: #89d04f;
+            }   
+        }  
+    }
+}

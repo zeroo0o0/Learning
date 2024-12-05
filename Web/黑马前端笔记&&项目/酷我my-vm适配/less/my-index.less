@@ -1,0 +1,216 @@
+//out: ../css/
+
+@import "./base";
+
+body {
+    background-color: #f9fafb;
+}
+
+@vw:3.75vw;
+
+// 头部
+header {
+    position: fixed; //转行内块  靠内容撑开
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 (15/@vw);
+    width: 100%;
+    height: (50/@vw);
+    background-color: #fff;
+    // 左边
+    .left {
+        width: (235/@vw);
+        height: (50/@vw);
+        background-image: url(../assets/head.png);
+        background-size: contain;
+        // 有一个相等就停止缩放
+        background-repeat: no-repeat;
+    }
+    a {
+        width: (80/@vw);
+        height: (30/@vw);
+        background-color: #ffe31b;
+        border-radius: (15/@vw);
+        text-align: center;
+        line-height: (30/@vw);
+        // align-items: center;  对文字无效
+        font-size: (14/@vw);
+    }
+}
+
+// 搜索
+.search {
+    margin-top: (50/@vw);
+    padding: (10/@vw) (15/@vw);
+    height: (52/@vw);
+    // background-color: pink;
+    .txt {
+        height: (32/@vw);
+        background-color: #f2f4f5;
+        border-radius: (16/@vw);
+        text-align: center;
+        // align-self: center;
+        line-height: (32/@vw);
+        color: #a1a4b3;
+        font-size: (14/@vw);
+        .iconfont {
+            font-size: (16/@vw);
+        }
+    }
+}
+
+// banner
+.banner {
+    padding: 0 (15/@vw);
+    height: (108/@vw);
+    // background-color: pink;
+    ul {
+        li {
+            width: (345/@vw);
+            height: (108/@vw);
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: (5/@vw);
+            }
+        }
+    }
+}
+
+// 排行榜
+.list {
+    margin-top: (20/@vw);
+    padding: 0 (15/@vw);// 宽度自然被压缩
+    li {
+        margin-bottom: (16/@vw);
+        height: (105/@vw);
+        background-color: #fff;
+        border-radius: (10/@vw);
+        display: flex;
+        .pic {
+            margin-right: (20/@vw);
+            img {
+                width: (105/@vw);
+                height: (105/@vw);
+                border-radius: (10/@vw);
+            }
+        }
+        .txt {
+            a {
+                display: block;
+                font-size: (12/@vw);
+                color: #a1a4b3;
+                line-height: 1.8;
+            }
+            .more{
+                font-size: (14/@vw);
+                color: #333;
+                .iconfont {
+                    font-size: (16/@vw);
+                }
+            }
+        }
+    }
+}
+
+// 标题 --> 公共样式
+.title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: (16/@vw);
+    line-height: (25/@vw);
+    h4 {
+        font-size: (20/@vw);
+    }
+    a {
+        font-size: (12/@vw);
+        color: #a1a4b3;
+        // align-self: center; 会有一点区别
+        .iconfont {
+            font-size: (16/@vw);
+        }
+    }
+}
+
+// 推荐歌单
+.recommend {
+    padding: 0 (15/@vw);
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+            margin-bottom: (16/@vw);
+            width: (105/@vw);
+            height: (143/@vw);
+            // background-color: pink;
+            // 图片
+            .pic {
+                position: relative;
+                width: (105/@vw);
+                height: (105/@vw);
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: (10/@vw);
+                }
+                .cover {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: (70/@vw);
+                    height: (28/@vw);
+                    background-color: rgba(0,0,0,0.8);
+                    border-radius: 0 (10/@vw);
+                    text-align: center;
+                    line-height: (28/@vw);
+                    color: #fff;
+                    font-size: (14/@vw);
+                }
+            }
+            // 文字
+            .txt {
+                font-size: (14/@vw);
+            }
+        }
+    }
+}
+
+// 下载
+.download {
+    position: fixed;
+    left: (15/@vw);
+    bottom: (30/@vw);
+
+    display: flex;
+    align-items: center;
+    padding: 0 (10/@vw) 0 (15/@vw);
+    width: (345/@vw);
+    height: (45/@vw);
+    background-color: #fff;
+    // border-radius: 50%; 不行，变椭圆了 
+    border-radius: (22/@vw);
+    img {
+        margin-right: (10/@vw);
+        width: (36/@vw);
+        height: (36/@vw);
+    }
+    p {
+        flex: 1;
+        font-size: (14/@vw);
+    }
+    span {
+        width: (32/@vw);
+        height: (32/@vw);
+        background-color: #f2f3f5;
+        border-radius: 50%;
+        text-align: center;
+        line-height: (32/@vw);
+        font-size: (16/@vw);
+    }
+}

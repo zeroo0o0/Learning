@@ -1,0 +1,70 @@
+.bg-body-tertiary {
+  background-color: transparent !important;
+}
+.bg-body-tertiary .navbar-collapse {
+  flex-grow: 0;
+}
+.bg-body-tertiary .nav-link {
+  color: #fff;
+}
+.bg-body-tertiary .navbar-nav .nav-link.active,
+.bg-body-tertiary .navbar-nav .show > .nav-link {
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .carousel .carousel-item {
+    height: 250px;
+  }
+}
+@media (min-width: 768px) {
+  .carousel .carousel-item {
+    height: 400px;
+  }
+}
+@media (min-width: 992px) {
+  .carousel .carousel-item {
+    height: 500px;
+  }
+}
+.carousel .carousel-item {
+  background-size: cover;
+  background-position: center 0;
+}
+.carousel .carousel-item:nth-child(1) {
+  background-image: url(../assets/uploads/banner_1.jpg);
+}
+.carousel .carousel-item:nth-child(2) {
+  background-image: url(../assets/uploads/banner_2.jpg);
+}
+.carousel .carousel-item:nth-child(3) {
+  background-image: url(../assets/uploads/banner_3.jpg);
+}
+.carousel .carousel-item:nth-child(4) {
+  background-image: url(../assets/uploads/banner_4.jpg);
+}
+.project {
+  margin-top: 60px;
+  text-align: center;
+}
+.project .row div {
+  margin-bottom: 10px;
+  height: 200px ;
+}
+.project .row div a {
+  display: block;
+  height: 200px;
+  background-color: green;
+  border-radius: 4px;
+}
+.project .row div:nth-child(1) a {
+  background-color: #70c3ff;
+}
+.project .row div:nth-child(2) a {
+  background-color: #fd6a7f;
+}
+.project .row div:nth-child(3) a {
+  background-color: #7f8ea0;
+}
+.project .row div:nth-child(4) a {
+  background-color: #89d04f;
+}
